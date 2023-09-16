@@ -1,0 +1,1236 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body  {
+    font-family: Raleway;
+}
+header #balazsmate {
+    pointer-events:none;
+}
+
+header .navbar-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    font-weight: 200;
+    color: black;
+    height: 100%;
+    text-transform: uppercase;
+    vertical-align: middle;
+    position: relative;
+}
+
+#mainNavbar {
+    background-color: antiquewhite;
+}
+
+#balazsmate {
+    width: 70px;
+    height: 70px;
+}
+
+#navLinks {
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 1.5em;
+    margin-right: 300px;
+    z-index: auto;
+}
+#navLinks a{
+    color: rgb(138, 134, 129);
+}
+
+#navLinks #currentItem a{
+    text-decoration: underline;
+    color: black;
+}
+
+.nav-item {
+    padding: 0 20px
+}
+
+#navLinks a:hover{
+    color: black;
+    transition: 0.5s;
+}
+#mainNavbar {
+
+    justify-content: flex-end;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+}
+
+.nav-item:hover .dropdown {
+    display: block;
+  }
+
+#socialLinks a{
+    color:rgb(138, 134, 129);
+}
+
+#socialLinks a:hover{
+    color: black;
+    transition: 0.5s;
+}
+
+#socialLinks li{
+    margin: 0 5px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .position-choice {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+
+/* HOME */
+
+#homeContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    cursor: pointer;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(10px, 1fr));
+    grid-template-rows: repeat(6, 7vw);
+    grid-gap: 50px;
+    overflow: hidden;
+}
+.portfolio .home1{
+    grid-column: 2 / 6;
+    grid-row: 1 / 3;
+    background-image: url(Portrait/17.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+}
+
+.portfolio .home1 a{
+    font-size: 2rem;
+    display:flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0,0,0, .4);
+    opacity: 0;
+    text-decoration: none;
+    overflow: hidden;
+  
+}
+.portfolio .home1 a:hover{
+    opacity: 1;
+    transition: 0.25s;
+    overflow:hidden;
+  
+}
+
+.portfolio .home2{
+    grid-column: 6 / 10;
+    grid-row: 1 / 3;
+    background-image: url(Gastro/13.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+}
+
+.portfolio .home2 a{
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0,0,0, .4);
+    opacity: 0;
+    text-decoration: none;
+    overflow: hidden;
+  
+}
+.portfolio .home2 a:hover{
+    opacity: 1;
+    transition: 0.25s;
+    overflow: hidden;
+   
+}
+.portfolio .home3 {
+    grid-column: 2 / 6;
+    grid-row: 3 / 5;
+    background-image: url(Personal/1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+}
+
+.portfolio .home3 a{
+    font-size: 2rem;
+    display:flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0,0,0, .4);
+    opacity: 0;
+    text-decoration: none;
+    overflow: hidden;
+    
+}
+.portfolio .home3 a:hover{
+    opacity: 1;
+    transition: 0.25s;
+    overflow: hidden;
+   
+}
+
+.portfolio .home4 {
+    grid-column: 6 / 10;
+    grid-row: 3 / 5;
+    background-image: url(Travel/8.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+}
+
+.portfolio .home4 a{
+    font-size: 2rem;
+    display:flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0,0,0, .4);
+    opacity: 0;
+    text-decoration: none;
+    overflow: hidden;
+    
+}
+.portfolio .home4 a:hover{
+    opacity: 1;
+    transition: 0.25s;
+    overflow: hidden;
+   
+
+}
+
+/*Grid System a képeknek - Gastro*/
+
+#galleryContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.gallery1 {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(10px, 1fr));
+    grid-template-rows: repeat(7, 9vw);
+    grid-gap: 10px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#gastroImg-1{
+    grid-column: 1 / 6;
+    grid-row: 1 / 4;
+}
+
+#gastroImg-3 {
+    grid-column: 7 / 9;
+    grid-row: 1 / 3;
+}
+
+#gastroImg-5 {
+    grid-column: 6 / 8;
+    grid-row: 3 / 5;
+}
+
+#gastroImg-7 {
+    grid-column: 1 / 3;
+    grid-row: 4 / 6;
+}
+
+#gastroImg-12 {
+    grid-column: 3 / 5;
+    grid-row: 5 / 7;
+}
+#gastroImg-20 {
+    grid-column: 6 / 9;
+    grid-row: 6 / 7;
+}
+#gastroImg-13 {
+    grid-column: 5 / 7;
+    grid-row: 5 / 6;
+}
+#gastroImg-19 {
+    grid-column: 1 / 3;
+    grid-row: 7 / 8;
+}
+#gastroImg-23 {
+    grid-column: 5 / 7;
+    grid-row: 7 / 8;
+}
+#gastroImg-24 {
+    grid-column: 7 / 9;
+    grid-row: 7 / 8;
+}
+
+
+/*Grid System a képeknek - Portrait*/
+
+#galleryContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.gallery2 {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(10px, 1fr));
+    grid-template-rows: repeat(7, 11vw);
+    grid-gap: 10px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#portraitImg-1{
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+}
+
+#portraitImg-4 {
+    grid-column: 6 / 9;
+    grid-row: 1 / 3;
+}
+#portraitImg-7 {
+    grid-column: 4 / 6;
+    grid-row: 3 / 6;
+}
+
+#portraitImg-8 {
+    grid-column: 7 / 9;
+    grid-row: 5 / 7;
+}
+
+
+#portraitImg-18 {
+    grid-column: 1 / 3;
+    grid-row: 5 / 7;
+}
+#portraitImg-21 {
+    grid-column: 3 / 5;
+    grid-row: 6 / 8;
+}
+
+
+/*Grid - Personal */
+
+#galleryContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.gallery3 {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(10px, 1fr));
+    grid-template-rows: repeat(4, 10vw);
+    grid-gap: 10px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#personalImg-1{
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+#personalImg-2 {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+
+#personalImg-4 {
+    grid-column: 5 / 9;
+    grid-row: 1 / 3;
+}
+
+#personalImg-8 {
+    grid-column: 2 / 4;
+    grid-row: 3 / 5;
+}
+
+#personalImg-9 {
+    grid-column: 4 / 7;
+    grid-row: 4 / 6;
+}
+#personalImg-13 {
+    grid-column: 7 / 9;
+    grid-row: 3 / 5;
+}
+#personalImg-6 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+#personalImg-14 {
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
+}
+#personalImg-23 {
+    grid-column: 7 / 9;
+    grid-row: 6 / 7;
+}
+#personalImg-22 {
+    grid-column: 5 / 7;
+    grid-row: 6 / 7;
+}
+
+/*Grid - Travel */
+
+#galleryContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.gallery4 {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(10px, 1fr));
+    grid-template-rows: repeat(4, 10vw);
+    grid-gap: 10px;
+}
+
+.gallery4 .fancybox{
+    color: rgba(0,0,0, .4);
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#travelImg-1{
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+#travelImg-6 {
+    grid-column: 7 / 9;
+    grid-row: 1 / 3;
+}
+
+#travelImg-8 {
+    grid-column: 4 / 7;
+    grid-row: 2 / 4;
+}
+
+#travelImg-10 {
+    grid-column: 2 / 4;
+    grid-row: 3 / 5;
+}
+
+#travelImg-14 {
+    grid-column: 4 / 6;
+    grid-row: 4 / 5;
+}
+#travelImg-17 {
+    grid-column: 5 / 7;
+    grid-row: 5 / 6;
+}
+#travelImg-11 {
+    grid-column: 7 / 9;
+    grid-row: 3 / 4;
+}
+#travelImg-18 {
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
+}
+#travelImg-15 {
+    grid-column: 7 / 9;
+    grid-row: 4 / 6;
+}
+
+#aboutMe {
+    display: grid;
+    margin-top: 60px; 
+}
+
+#aboutTxt h1{
+    font-weight: 200;
+}
+#aboutTxt h1{
+    font-family: Yesteryear;
+    font-size: 60px;
+}
+#aboutTxt h2{
+    font-weight: 200;
+}
+
+#aboutP {
+    margin-top: 40px;
+    font-weight: 300;
+}
+
+#fosters {
+    color: black;
+}
+
+
+#email {
+    font-family: Yesteryear;
+    margin-top: 80px;
+    text-align: center;
+    justify-content: center;
+}
+#email h5 {
+    font-size: 35px
+}
+
+#emailLink {
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+#emailLink a{
+    color: black;
+}
+
+
+
+.footer {
+    height: 30vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 30px 0;
+    box-sizing: border-box;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inner_footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin:auto;
+}
+
+.inner_footer .footer_third{
+    text-align: center;
+    margin: auto;
+    height: 100%;
+}
+
+.inner_footer .footer_third a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    color: rgb(138, 134, 129);
+    display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 200;
+    width: 100%;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+.inner_footer .footer_third .container .row{
+    text-align: center;
+    justify-content: center;
+}
+
+.inner_footer .footer_third a:hover {
+    color: black;
+}
+
+.inner_footer .footer_third li {
+    display: inline-block;
+    font-size: 20px;
+}
+
+
+#copyright {
+    background-color: white;
+    color:rgb(138, 134, 129)
+}
+
+
+@media (max-width:1050px){
+    header .navbar-brand{
+        font-size: 1.5rem;
+    }
+}
+
+/*Home media*/
+
+@media (max-width:1000px){
+    #homeContainer {
+        width: 100%;
+        height: auto;
+        margin-top: 60px;
+        cursor: pointer;
+        padding-left: 0;
+        padding-right: 0;
+     }
+
+    .portfolio {
+        display: grid;
+        grid-template-columns: repeat(8, minmax(10px, 1fr));
+        grid-template-rows: repeat(21, 7vw);
+        grid-gap: 30px;
+        overflow: hidden;
+    }
+    .portfolio .home1{
+        grid-column: 2 / 8;
+        grid-row: 1 / 6;
+}
+    .portfolio .home2{
+        grid-column: 2 / 8;
+        grid-row: 6 / 11;
+}
+    .portfolio .home3{
+        grid-column: 2 / 8;
+        grid-row: 11 / 16;
+}
+    .portfolio .home4{
+        grid-column: 2 / 8;
+        grid-row: 16 / 21;    
+}
+}
+
+/* Footer media*/
+@media (max-width:1199px){
+    .footer {
+        height: 20vh;
+        padding: 20px 0;
+}
+    .inner_footer .footer_third h2{
+        font-size: 25px;
+        padding-top: 3px;
+        padding-bottom: 7px;
+}
+    .inner_footer .footer_third span {
+        font-size: 14px;
+}
+    #copyright {
+        font-size: 14px;
+    }
+}
+
+
+/*Navbar font and logo size*/
+@media (max-width:991px) {
+    #navLinks {
+        text-align: center;
+        margin-left: 0;
+    }
+    #socialLinks{
+        display: inline-block;
+    }
+    #socialLinks li{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    #aboutImg, #aboutTxt {
+        display: block;
+        text-align: center;
+        align-items: center;
+    }
+    #aboutImg{
+        margin-top: 0;
+    }
+    #aboutTxt {
+        margin-top: 30px;
+    }
+}
+            @media (max-width:476px){
+                #balazsmate {
+                    width: 60px;
+                    height: 60px;
+                 }
+                 header .navbar-brand{
+                     font-size: 1rem;
+                 }
+                }
+
+                @media (max-width:311px){
+                    #balazsmate {
+                        width: 50px;
+                        height: 50px;
+                     }
+                     header .navbar-brand{
+                         font-size: 0.7rem;
+                     }
+                    }
+
+/*Gastro media*/
+
+@media (max-width:991px){
+    #galleryContainer {
+        width: 100%;
+        height: auto;
+        margin-top: 60px;
+        cursor: pointer;
+     }
+
+    .gallery1 {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(10px, 1fr));
+        grid-template-rows: repeat(37, 8vw);
+        grid-gap: 10px;
+        overflow: hidden;
+    }
+    .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #gastroImg-1 {
+        grid-column: 1 / 4;
+        grid-row: 1 / 4;
+    }
+    #gastroImg-2 {
+        grid-column: 1 / 4;
+        grid-row: 4 / 7;
+    }
+   
+    #gastroImg-3 {
+        grid-column: 4 / 7;
+        grid-row: 1 / 4;
+    }
+    #gastroImg-4 {
+        grid-column: 4 / 7;
+        grid-row: 4 / 7;
+    }
+    
+     #gastroImg-5{
+        grid-column: 1 / 4;
+        grid-row: 7 / 10;
+     }
+     #gastroImg-6{
+        grid-column: 4 / 7;
+        grid-row: 7 / 10;
+     }
+     #gastroImg-7{
+        grid-column: 1 / 4;
+        grid-row: 10 / 13;
+     }
+     #gastroImg-8{
+        grid-column: 4 / 7;
+        grid-row: 10 / 13;
+     }
+     #gastroImg-9{
+         grid-column: 1 / 4;
+         grid-row: 13 / 16;
+     }
+     #gastroImg-10{
+        grid-column: 4 / 7;
+        grid-row: 13 / 16;
+    }
+    #gastroImg-11{
+        grid-column: 1 / 4;
+        grid-row: 16 / 19;
+    }
+    #gastroImg-12{
+        grid-column: 4 / 7;
+        grid-row: 16 / 19;
+    }
+    #gastroImg-13{
+        grid-column: 1 / 4;
+        grid-row: 19 / 22;
+    }
+    #gastroImg-14{
+        grid-column: 4 / 7;
+        grid-row: 19 / 22;
+    }
+    #gastroImg-15{
+        grid-column: 1 / 4;
+        grid-row: 22 / 25;
+    }
+    #gastroImg-16{
+        grid-column: 4 / 7;
+        grid-row: 22 / 25;
+    }
+    #gastroImg-17{
+        grid-column: 1 / 4;
+        grid-row: 25 / 28;
+    }
+    #gastroImg-18{
+        grid-column: 4 / 7;
+        grid-row: 25 / 28;
+    }
+    #gastroImg-19{
+        grid-column: 1 / 4;
+        grid-row: 28 / 31;
+    }
+    #gastroImg-20{
+        grid-column: 4 / 7;
+        grid-row: 28 / 31;
+    }
+    #gastroImg-21{
+        grid-column: 1 / 4;
+        grid-row: 31 / 34;
+    }
+    #gastroImg-22{
+        grid-column: 4 / 7;
+        grid-row: 31 / 34;
+    }
+    #gastroImg-23{
+        grid-column: 1 / 4;
+        grid-row: 34 / 37;
+    }
+    #gastroImg-24{
+        grid-column: 4 / 7;
+        grid-row: 34 / 37;
+    }
+
+}
+/*Portrait media*/
+
+@media (max-width:991px){
+    #galleryContainer {
+        width: 100%;
+        height: auto;
+        margin-top: 60px;
+        cursor: pointer;
+     }
+
+    .gallery2 {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(10px, 1fr));
+        grid-template-rows: repeat(37, 8vw);
+        grid-gap: 10px;
+        overflow: hidden;
+    }
+    .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #portraitImg-1 {
+        grid-column: 1 / 3;
+        grid-row: 1 / 6;
+    }
+    #portraitImg-2 {
+        grid-column: 3 / 5;
+        grid-row: 1 / 6;
+    }
+
+    #portraitImg-3 {
+        grid-column: 1 / 3;
+        grid-row: 6 / 11;
+    }
+    #portraitImg-4 {
+        grid-column: 3 / 5;
+        grid-row: 6 / 11;
+    }
+    
+     #portraitImg-5{
+        grid-column: 1 / 3;
+        grid-row: 11 / 16;
+     }
+     #portraitImg-6{
+        grid-column: 3 / 5;
+        grid-row: 11 / 16;
+     }
+     #portraitImg-7{
+        grid-column: 1 / 3;
+        grid-row: 16 / 21;
+     }
+     #portraitImg-8{
+        grid-column: 3 / 5;
+        grid-row: 16 / 21;
+     }
+     #portraitImg-9{
+         grid-column: 1 / 3;
+         grid-row: 21 / 26;
+     }
+     #portraitImg-10{
+        grid-column: 3 / 5;
+        grid-row: 21 / 26;
+    }
+    #portraitImg-11{
+        grid-column: 1 / 3;
+        grid-row: 26 / 31;
+    }
+    #portraitImg-12{
+        grid-column: 3 / 5;
+        grid-row: 26 / 31;
+    }
+    #portraitImg-13{
+        grid-column: 1 / 3;
+        grid-row: 31 / 36;
+    }
+    #portraitImg-14{
+        grid-column: 3 / 5;
+        grid-row: 31 / 36;
+    }
+    #portraitImg-15{
+        grid-column: 1 / 3;
+        grid-row: 36 / 41;
+    }
+    #portraitImg-16{
+        grid-column: 3 / 5;
+        grid-row: 36 / 41;
+    }
+    #portraitImg-17{
+        grid-column: 1 / 3;
+        grid-row: 41 / 46;
+    }
+    #portraitImg-18{
+        grid-column: 3 / 5;
+        grid-row: 41 / 46;
+    }
+    #portraitImg-19{
+        grid-column: 1 / 3;
+        grid-row: 46 / 51;
+    }
+    #portraitImg-20{
+        grid-column: 3 / 5;
+        grid-row: 46 / 51;
+    }
+    #portraitImg-21{
+        grid-column: 1 / 3;
+        grid-row: 51 / 56;
+    }
+    #portraitImg-22{
+        grid-column: 3 / 5;
+        grid-row: 51 / 56;
+    }
+    #portraitImg-23{
+        grid-column: 1 / 3;
+        grid-row: 56 / 61;
+    }
+    #portraitImg-24{
+        grid-column: 3 / 5;
+        grid-row: 56 / 61;
+    }
+    #portraitImg-25{
+        grid-column: 1 / 3;
+        grid-row: 61 / 66;
+    }
+    #portraitImg-26{
+        grid-column: 3 / 5;
+        grid-row: 61 / 66;
+    }
+    #portraitImg-27{
+        grid-column: 1 / 3;
+        grid-row: 66 / 71;
+    }
+    #portraitImg-28{
+        grid-column: 3 / 5;
+        grid-row: 66 / 71;
+    }
+    #portraitImg-29{
+        grid-column: 1 / 3;
+        grid-row: 71 / 76;
+    }
+}
+
+/*Personal - media*/
+@media (max-width:991px){
+    #galleryContainer {
+        width: 100%;
+        height: auto;
+        margin-top: 60px;
+        cursor: pointer;
+     }
+
+    .gallery3 {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(10px, 1fr));
+        grid-template-rows: repeat(34, 8vw);
+        grid-gap: 10px;
+        overflow: hidden;
+    }
+    .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #personalImg-1 {
+        grid-column: 1 / 4;
+        grid-row: 1 / 4;
+    }
+    #personalImg-2 {
+        grid-column: 4 / 7;
+        grid-row: 1 / 4;
+    }
+   
+    #personalImg-3 {
+        grid-column: 1 / 4;
+        grid-row: 4 / 7;
+    }
+    #personalImg-4 {
+        grid-column: 4 / 7;
+        grid-row: 4 / 7;
+    }
+    
+     #personalImg-5{
+        grid-column: 1 / 4;
+        grid-row: 7 / 10;
+     }
+     #personalImg-6{
+        grid-column: 4 / 7;
+        grid-row: 7 / 10;
+     }
+     #personalImg-7{
+        grid-column: 1 / 4;
+        grid-row: 10 / 13;
+     }
+     #personalImg-8{
+        grid-column: 4 / 7;
+        grid-row: 10 / 13;
+     }
+     #personalImg-9{
+         grid-column: 1 / 4;
+         grid-row: 13 / 16;
+     }
+     #personalImg-10{
+        grid-column: 4 / 7;
+        grid-row: 13 / 16;
+    }
+    #personalImg-11{
+        grid-column: 1 / 4;
+        grid-row: 16 / 19;
+    }
+    #personalImg-12{
+        grid-column: 4 / 7;
+        grid-row: 16 / 19;
+    }
+    #personalImg-13{
+        grid-column: 1 / 4;
+        grid-row: 19 / 22;
+    }
+    #personalImg-14{
+        grid-column: 4 / 7;
+        grid-row: 19 / 22;
+    }
+    #personalImg-15{
+        grid-column: 1 / 4;
+        grid-row: 22 / 25;
+    }
+    #personalImg-16{
+        grid-column: 4 / 7;
+        grid-row: 22 / 25;
+    }
+    #personalImg-17{
+        grid-column: 1 / 4;
+        grid-row: 25 / 28;
+    }
+    #personalImg-18{
+        grid-column: 4 / 7;
+        grid-row: 25 / 28;
+    }
+    #personalImg-19{
+        grid-column: 1 / 4;
+        grid-row: 28 / 31;
+    }
+    #personalImg-20{
+        grid-column: 4 / 7;
+        grid-row: 28 / 31;
+    }
+    #personalImg-21{
+        grid-column: 1 / 4;
+        grid-row: 31 / 34;
+    }
+    #personalImg-22{
+        grid-column: 4 / 7;
+        grid-row: 31 / 34;
+    }
+    #personalImg-23{
+        grid-column: 1 / 4;
+        grid-row: 34 / 37;
+    }
+}
+
+/*Travel - media*/
+
+@media (max-width:991px){
+
+    #galleryContainer {
+        width: 100%;
+        height: auto;
+        margin-top: 60px;
+        cursor: pointer;
+     }
+
+    .gallery4 {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(10px, 1fr));
+        grid-template-rows: repeat(30, 8vw);
+        grid-gap: 10px;
+        overflow: hidden;
+    }
+    .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #travelImg-1 {
+        grid-column: 1 / 4;
+        grid-row: 1 / 4;
+    }
+    #travelImg-2 {
+        grid-column: 4 / 7;
+        grid-row: 1 / 4;
+    }
+   
+    #travelImg-3 {
+        grid-column: 1 / 4;
+        grid-row: 4 / 7;
+    }
+    #travelImg-4 {
+        grid-column: 4 / 7;
+        grid-row: 4 / 7;
+    }
+    
+     #travelImg-5{
+        grid-column: 1 / 4;
+        grid-row: 7 / 10;
+     }
+     #travelImg-6{
+        grid-column: 4 / 7;
+        grid-row: 7 / 10;
+     }
+     #travelImg-7{
+        grid-column: 1 / 4;
+        grid-row: 10 / 13;
+     }
+     #travelImg-8{
+        grid-column: 4 / 7;
+        grid-row: 10 / 13;
+     }
+     #travelImg-9{
+         grid-column: 1 / 4;
+         grid-row: 13 / 16;
+     }
+     #travelImg-10{
+        grid-column: 4 / 7;
+        grid-row: 13 / 16;
+    }
+    #travelImg-11{
+        grid-column: 1 / 4;
+        grid-row: 16 / 19;
+    }
+    #travelImg-12{
+        grid-column: 4 / 7;
+        grid-row: 16 / 19;
+    }
+    #travelImg-13{
+        grid-column: 1 / 4;
+        grid-row: 19 / 22;
+    }
+    #travelImg-14{
+        grid-column: 4 / 7;
+        grid-row: 19 / 22;
+    }
+    #travelImg-15{
+        grid-column: 1 / 4;
+        grid-row: 22 / 25;
+    }
+    #travelImg-16{
+        grid-column: 4 / 7;
+        grid-row: 22 / 25;
+    }
+    #travelImg-17{
+        grid-column: 1 / 4;
+        grid-row: 25 / 28;
+    }
+    #travelImg-18{
+        grid-column: 4 / 7;
+        grid-row: 25 / 28;
+    }
+    #travelImg-19{
+        grid-column: 1 / 4;
+        grid-row: 28 / 31;
+    }
+}
