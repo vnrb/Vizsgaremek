@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PFL - PRO FANTASY LEAGUE</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon_io/favicon-32x32.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+             <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-blue">
+              <img src="pics/logo.png" id="balazsmate" alt="PhotoLogo">
+              <a href="index.html" class="navbar-brand">HOT PODTATO FANTASY</a>
+              <button class="navbar-toggler" type="button" aria-controls="navLinks" aria-label="toggle navigation" data-toggle="collapse" data-target="#navLinks">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navLinks" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">FŐOLDAL</a>
+              </li>
+                <li class="nav-item">
+                    <a href="fantasyligak.html" class="nav-link">FANATASY LIGÁK</a>
+                </li>
+                <li class="nav-item">
+                    <a href="hirek.html" class="nav-link">HÍREK</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a href="tippjatek.html" class="nav-link">TIPPJÁTÉK</a>
+                </li>
+            </ul>
+            <ul id="socialLinks" class="navbar-nav ml-auto">
+            <li><a href="mailto:mate@bmatephoto.hu" target="_blank"><i class="far fa-envelope"></i></a></li>
+            <li><a href="https://www.facebook.com/hodpotatofantasy/"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/hotpodtatofantasy/"><i class="fab fa-instagram"></i></a></li>
+             </ul>
+        </div>
+      </nav>
+  </header>
+
+<body>
+  <h1>NFL Player Rankings</h1>
+  <div>
+    <div class="position-choice">
+      <input type="radio" id="qb" name="position" value="qb" onchange="changePosition('qb')" checked>
+      <label for="qb">Quarterback</label>
+    </div>
+    <div class="position-choice">
+      <input type="radio" id="rb" name="position" value="rb" onchange="changePosition('rb')">
+      <label for="rb">Running Back</label>
+    </div>
+    <div class="position-choice">
+      <input type="radio" id="wr" name="position" value="wr" onchange="changePosition('wr')">
+      <label for="wr">Wide Receiver</label>
+    </div>
+    <div class="position-choice">
+      <input type="radio" id="te" name="position" value="te" onchange="changePosition('te')">
+      <label for="te">Tight End</label>
+    </div>
+  </div>
+
+  
+</body>
+
+<script src="admin.js"></script>
+
+</html>
