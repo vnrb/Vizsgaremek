@@ -281,3 +281,15 @@ td, th{
 #thname{
     text-align: left;
 }
+
+.blog-page {
+    color: rgba(0, 0, 0);
+    padding: 30px;
+}
+
+.blog-post {
+    background-color: rgba(254, 234, 215, 1);
+    min-height: auto;
+    margin: 20px auto;
+    padding: 15px;
+}
