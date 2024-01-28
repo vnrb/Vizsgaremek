@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 
 app.use(express.static('public'));
 
+// SERVER KÉRÉSEK
+
 app.get('/', (req, res) =>{
     fs.readFile("./index.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
@@ -14,8 +16,8 @@ app.get('/', (req, res) =>{
     });
 });
 
-app.get('/ranking1.html', (req, res) =>{
-    fs.readFile("./ranking1.html", (err, file)=>{
+app.get('/dynasty', (req, res) =>{
+    fs.readFile("./dynasty ranking.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -23,8 +25,8 @@ app.get('/ranking1.html', (req, res) =>{
     });
 });
 
-app.get('/ranking2.html', (req, res) =>{
-    fs.readFile("./ranking2.html", (err, file)=>{
+app.get('/redraft', (req, res) =>{
+    fs.readFile("./redraft ranking.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -32,8 +34,8 @@ app.get('/ranking2.html', (req, res) =>{
     });
 });
 
-app.get('/ranking3.html', (req, res) =>{
-    fs.readFile("./ranking3.html", (err, file)=>{
+app.get('/rookies', (req, res) =>{
+    fs.readFile("./rookie ranking.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -41,8 +43,8 @@ app.get('/ranking3.html', (req, res) =>{
     });
 });
 
-app.get('/ranking4.html', (req, res) =>{
-    fs.readFile("./ranking4.html", (err, file)=>{
+app.get('/injuries', (req, res) =>{
+    fs.readFile("./injuries.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -50,7 +52,7 @@ app.get('/ranking4.html', (req, res) =>{
     });
 });
 
-app.get('/blog.html', (req, res) =>{
+app.get('/blog', (req, res) =>{
     fs.readFile("./blog.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
@@ -59,7 +61,7 @@ app.get('/blog.html', (req, res) =>{
     });
 });
 
-app.get('/fantasyligak.html', (req, res) =>{
+app.get('/fantasyligak', (req, res) =>{
     fs.readFile("./fantasyligak.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
@@ -68,7 +70,7 @@ app.get('/fantasyligak.html', (req, res) =>{
     });
 });
 
-app.get('/hirek.html', (req, res) =>{
+app.get('/hirek', (req, res) =>{
     fs.readFile("./hirek.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
@@ -77,7 +79,7 @@ app.get('/hirek.html', (req, res) =>{
     });
 });
 
-app.get('/admin.html', (req, res) =>{
+app.get('/admin', (req, res) =>{
     fs.readFile("./admin.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
@@ -86,8 +88,8 @@ app.get('/admin.html', (req, res) =>{
     });
 });
 
-app.get('/index.html', (req, res) =>{
-    fs.readFile("./index.html", (err, file)=>{
+app.get('/tippjatek', (req, res) =>{
+    fs.readFile("./tippjatek.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -95,4 +97,33 @@ app.get('/index.html', (req, res) =>{
     });
 });
 
-app.listen(8080);
+
+// ADATBÁZIS LEKÉRDEZÉS 
+
+const mysql = require('mysql');
+
+const kapcsolat = ()=>{
+    return mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: '',
+        database: 'hotpodtato'
+
+    });
+};
+
+app.get('/x',(req,res)=>{
+    const connection = kapcsolat();
+        connection.query("select * from players",(error, result, fields)=>{
+        if(error)
+            res.send({"error":"Hiba lépett fel a lekérés során."})
+        else
+            res.send(result);
+            console.log(result);
+    })
+    
+    connection.end();
+});
+
+
+app.listen(3000);
