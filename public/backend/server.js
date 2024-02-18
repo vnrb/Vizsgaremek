@@ -8,7 +8,7 @@ app.use(express.static('public'));
 // SERVER KÉRÉSEK
 
 app.get('/', (req, res) =>{
-    fs.readFile("./index.html", (err, file)=>{
+    fs.readFile("../frontend/html/index.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -17,7 +17,7 @@ app.get('/', (req, res) =>{
 });
 
 app.get('/dynasty', (req, res) =>{
-    fs.readFile("./dynasty ranking.html", (err, file)=>{
+    fs.readFile("../frontend/html/dynasty ranking.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -26,7 +26,7 @@ app.get('/dynasty', (req, res) =>{
 });
 
 app.get('/redraft', (req, res) =>{
-    fs.readFile("./redraft ranking.html", (err, file)=>{
+    fs.readFile("../frontend/html/redraft ranking.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -35,7 +35,7 @@ app.get('/redraft', (req, res) =>{
 });
 
 app.get('/rookies', (req, res) =>{
-    fs.readFile("./rookie ranking.html", (err, file)=>{
+    fs.readFile("../frontend/html/rookie ranking.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -44,7 +44,7 @@ app.get('/rookies', (req, res) =>{
 });
 
 app.get('/injuries', (req, res) =>{
-    fs.readFile("./injuries.html", (err, file)=>{
+    fs.readFile("../frontend/html/injuries.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -53,7 +53,7 @@ app.get('/injuries', (req, res) =>{
 });
 
 app.get('/blog', (req, res) =>{
-    fs.readFile("./blog.html", (err, file)=>{
+    fs.readFile("../frontend/html/blog.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -62,7 +62,7 @@ app.get('/blog', (req, res) =>{
 });
 
 app.get('/fantasyligak', (req, res) =>{
-    fs.readFile("./fantasyligak.html", (err, file)=>{
+    fs.readFile("../frontend/html/fantasyligak.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -71,7 +71,7 @@ app.get('/fantasyligak', (req, res) =>{
 });
 
 app.get('/hirek', (req, res) =>{
-    fs.readFile("./hirek.html", (err, file)=>{
+    fs.readFile("../frontend/html/hirek.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -80,7 +80,7 @@ app.get('/hirek', (req, res) =>{
 });
 
 app.get('/admin', (req, res) =>{
-    fs.readFile("./admin.html", (err, file)=>{
+    fs.readFile("../frontend/html/admin.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
@@ -89,7 +89,7 @@ app.get('/admin', (req, res) =>{
 });
 
 app.get('/tippjatek', (req, res) =>{
-    fs.readFile("./tippjatek.html", (err, file)=>{
+    fs.readFile("../frontend/html/tippjatek.html", (err, file)=>{
         res.setHeader('access-control-allow-origin','*');
         res.setHeader('Content-type', 'text/html');
         res.status(200);
