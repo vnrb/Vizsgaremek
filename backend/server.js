@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-app.use(express.static('public'));
+app.use(express.static('../'));
 
 // SERVER KÉRÉSEK
 
@@ -100,30 +100,36 @@ app.get('/tippjatek', (req, res) =>{
 
 // ADATBÁZIS LEKÉRDEZÉS 
 
+/*lekerdezes();
+
 const mysql = require('mysql');
 
-const kapcsolat = ()=>{
-    return mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'hotpodtato'
-
-    });
-};
-
-app.get('/x',(req,res)=>{
-    const connection = kapcsolat();
-        connection.query("select * from players",(error, result, fields)=>{
-        if(error)
-            res.send({"error":"Hiba lépett fel a lekérés során."})
-        else
-            res.send(result);
-            console.log(result);
-    })
+function lekerdezes(){
     
-    connection.end();
-});
+    const kapcsolat = ()=>{
+        return mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: '',
+            database: 'hotpodtato'
+        });
+    };
 
+    app.get('/dynasty',(req,res)=>{
+        const connection = kapcsolat();
+            connection.query("select * from players",(error, result, fields)=>{
+            if(error)
+                res.send({"error":"Hiba lépett fel a lekérés során."})
+            else
+                res.send(result);    
+                console.log(result);
+                
+                
+        })
+
+        connection.end();
+    });
+
+}*/
 
 app.listen(3000);

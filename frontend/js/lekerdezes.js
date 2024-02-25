@@ -1,25 +1,23 @@
-function lekerdezes(){
-    
-    const mysql = require('mysql');
+// ADATBÁZIS LEKÉRDEZÉS:
 
-    const kapcsolat = ()=>{
-        return mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: '',
-            database: 'hotpodtato'
-        });
-    };
+const mysql = require('mysql');
 
-    const connection = kapcsolat();
-    connection.query("select * from players",(error, result, fields)=>{
-        if(error)
-            res.send({"error":"Hiba lépett fel a lekérés során."})
-        else
-            res.send(result);
-            console.log(result);
+const kapcsolat = ()=>{
+    return mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: '',
+        database: 'hotpodtato'
     });
-        
-    connection.end();
+};
 
-}
+const connection = kapcsolat();
+    connection.query("select * from players",(error, result, fields)=>{
+    if(error)
+        res.send({"error":"Hiba lépett fel a lekérés során."})
+    else
+        //res.send(result);
+        console.log(result);
+})
+
+connection.end();
