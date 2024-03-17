@@ -34,22 +34,18 @@
           </button>
           <div id="navLinks" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">FŐOLDAL</a>
+              </li>
                 <li class="nav-item">
-                  <li class="nav-item">
-                    <a href="index.html" class="nav-link">FŐOLDAL</a>
-                  </li>
-                    <a href="fantasyligak" class="nav-link">FANATASY LIGÁK</a>
+                    <a href="fantasyligak.html" class="nav-link">FANATASY LIGÁK</a>
                 </li>
                 <li class="nav-item">
-                    <a href="hirek" class="nav-link">HÍREK</a>
+                    <a href="hirek.html" class="nav-link">HÍREK</a>
                 </li>
                 <li class="nav-item">
-                    <a href="blog" class="nav-link">BLOG</a>
+                    <a href="blog.html" class="nav-link">BLOG</a>
                 </li>
-                <li class="nav-item">
-                    <a href="tippjatek" class="nav-link">TIPPJÁTÉK</a>
-                </li>
-            </ul>
             <ul id="socialLinks" class="navbar-nav ml-auto">
             <li><a href="mailto:mate@bmatephoto.hu" target="_blank"><i class="far fa-envelope"></i></a></li>
             <li><a href="https://www.facebook.com/hodpotatofantasy/"><i class="fab fa-facebook"></i></a></li>
@@ -58,33 +54,40 @@
         </div>
       </nav>
   </header>
-  
+
 <body>
+
   <h1>NFL Player Rankings</h1>
   <div>
     <div class="position-choice">
-      <input type="radio" id="qb" name="position" value="qb" onchange="changePosition('qb')" checked>
+      <input type="radio" id="all" name="position" value="all" onclick="positionAll()" checked>
+      <label for="all">All</label>
+    </div>
+    <div class="position-choice">
+      <input type="radio" id="qb" name="position" value="qb" onclick="positionQb()">
       <label for="qb">Quarterback</label>
     </div>
     <div class="position-choice">
-      <input type="radio" id="rb" name="position" value="rb" onchange="changePosition('rb')">
+      <input type="radio" id="rb" name="position" value="rb" onclick="positionRb()">
       <label for="rb">Running Back</label>
     </div>
     <div class="position-choice">
-      <input type="radio" id="wr" name="position" value="wr" onchange="changePosition('wr')">
+      <input type="radio" id="wr" name="position" value="wr" onclick="positionWr()">
       <label for="wr">Wide Receiver</label>
     </div>
     <div class="position-choice">
-      <input type="radio" id="te" name="position" value="te" onchange="changePosition('te')">
+      <input type="radio" id="te" name="position" value="te" onclick="positionTe()">
       <label for="te">Tight End</label>
     </div>
   </div>
 
-  <div id="tablaDiv2">
+
+  <div id="tablaDiv">
     
-  </div> 
+  </div>
 
 </body>
+
 
 <script src="../js/redraft_lekerdezes.js"></script>
 

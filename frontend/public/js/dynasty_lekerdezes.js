@@ -1,37 +1,5 @@
 // ADATBÁZIS LEKÉRDEZÉS:
 
-const CellatASorba = (row, adat)=>{
-    column = document.createElement("td");
-    column.innerHTML = adat;
-    row.appendChild(column);
-};
-
-const FejlecKeszites = (table)=>{
-    const row = document.createElement("tr");
-    row.setAttribute("id", "fejlec")
-    CellatASorba(row,"Player Name");
-    CellatASorba(row,"Team");
-    CellatASorba(row,"Position");
-    CellatASorba(row,"Exp");
-    CellatASorba(row,"Status");
-    CellatASorba(row,"GP");
-    CellatASorba(row,"P-yards");
-    CellatASorba(row,"P-tds");
-    CellatASorba(row,"P-int");
-    CellatASorba(row,"R-yards");
-    CellatASorba(row,"R-tds");
-    CellatASorba(row,"Rec");
-    CellatASorba(row,"RecYards")
-    CellatASorba(row,"Rectds");
-    CellatASorba(row,"Sck");
-    CellatASorba(row,"RecInts");
-    CellatASorba(row,"Ffumbles");
-    CellatASorba(row,"Freturn");
-    CellatASorba(row,"PPG");
-    CellatASorba(row,"Total points");
-    table.appendChild(row);
-};
-
 AdatokBetolteseTablaba =(adatok)=>{
     const div = document.getElementById("tablaDiv");
     const table = document.createElement("table");
@@ -64,8 +32,39 @@ AdatokBetolteseTablaba =(adatok)=>{
     } 
     div.appendChild(table);
 
+}    
 
-}
+const CellatASorba = (row, adat)=>{
+    column = document.createElement("td");
+    column.innerHTML = adat;
+    row.appendChild(column);
+};
+
+const FejlecKeszites = (table)=>{
+    const row = document.createElement("tr");
+    row.setAttribute("id", "fejlec")
+    CellatASorba(row,"Player Name");
+    CellatASorba(row,"Team");
+    CellatASorba(row,"Position");
+    CellatASorba(row,"Exp");
+    CellatASorba(row,"Status");
+    CellatASorba(row,"GP");
+    CellatASorba(row,"P-yards");
+    CellatASorba(row,"P-tds");
+    CellatASorba(row,"P-int");
+    CellatASorba(row,"R-yards");
+    CellatASorba(row,"R-tds");
+    CellatASorba(row,"Rec");
+    CellatASorba(row,"RecYards")
+    CellatASorba(row,"Rectds");
+    CellatASorba(row,"Sck");
+    CellatASorba(row,"RecInts");
+    CellatASorba(row,"Ffumbles");
+    CellatASorba(row,"Freturn");
+    CellatASorba(row,"PPG");
+    CellatASorba(row,"Total points");
+    table.appendChild(row);
+};
 
 const AdatokLekereseAdatbazisbol = ()=>{
     let adatok =[];
@@ -82,7 +81,7 @@ const AdatokLekereseAdatbazisbol = ()=>{
             adatok.push(element)
         });
         AdatokBetolteseTablaba(adatok);
-        console.log(adatok);
+
     });
 };
 
@@ -91,3 +90,145 @@ const Main = ()=>{
 };
 
 Main();
+
+// SZŰRÉS
+
+function positionAll(){
+
+    const div = document.getElementById("tablaDiv");
+    div.innerHTML="";
+
+    const AdatokLekereseAdatbazisbol = ()=>{
+        let adatok =[];
+        console.log(adatok)
+        fetch("http://127.0.0.1:3000/dynastyall")
+        .then((res)=>{
+            if(!res.ok)
+                console.log("Hiba lépett fel az adatbázis kapcsolat létrehozása során");
+            else
+                return res.json();
+    
+        })
+        .then((res)=>{
+            res.forEach(element =>{
+                adatok.push(element)
+            });
+            AdatokBetolteseTablaba(adatok);
+    
+        });
+    };
+
+    AdatokLekereseAdatbazisbol();
+}
+
+function positionQb(){
+
+    const div = document.getElementById("tablaDiv");
+    div.innerHTML="";
+
+    const AdatokLekereseAdatbazisbol = ()=>{
+        let adatok =[];
+        console.log(adatok)
+        fetch("http://127.0.0.1:3000/dynastyqb")
+        .then((res)=>{
+            if(!res.ok)
+                console.log("Hiba lépett fel az adatbázis kapcsolat létrehozása során");
+            else
+                return res.json();
+    
+        })
+        .then((res)=>{
+            res.forEach(element =>{
+                adatok.push(element)
+            });
+            AdatokBetolteseTablaba(adatok);
+    
+        });
+    };
+
+    AdatokLekereseAdatbazisbol();
+}
+
+function positionRb(){
+
+    const div = document.getElementById("tablaDiv");
+    div.innerHTML="";
+
+    const AdatokLekereseAdatbazisbol = ()=>{
+        let adatok =[];
+        console.log(adatok)
+        fetch("http://127.0.0.1:3000/dynastyrb")
+        .then((res)=>{
+            if(!res.ok)
+                console.log("Hiba lépett fel az adatbázis kapcsolat létrehozása során");
+            else
+                return res.json();
+    
+        })
+        .then((res)=>{
+            res.forEach(element =>{
+                adatok.push(element)
+            });
+            AdatokBetolteseTablaba(adatok);
+    
+        });
+    };
+
+    AdatokLekereseAdatbazisbol();
+}
+
+function positionWr(){
+
+    const div = document.getElementById("tablaDiv");
+    div.innerHTML="";
+
+    const AdatokLekereseAdatbazisbol = ()=>{
+        let adatok =[];
+        console.log(adatok)
+        fetch("http://127.0.0.1:3000/dynastywr")
+        .then((res)=>{
+            if(!res.ok)
+                console.log("Hiba lépett fel az adatbázis kapcsolat létrehozása során");
+            else
+                return res.json();
+    
+        })
+        .then((res)=>{
+            res.forEach(element =>{
+                adatok.push(element)
+            });
+            AdatokBetolteseTablaba(adatok);
+    
+        });
+    };
+
+    AdatokLekereseAdatbazisbol();
+}
+
+function positionTe(){
+
+    const div = document.getElementById("tablaDiv");
+    div.innerHTML="";
+
+    const AdatokLekereseAdatbazisbol = ()=>{
+        let adatok =[];
+        console.log(adatok)
+        fetch("http://127.0.0.1:3000/dynastyte")
+        .then((res)=>{
+            if(!res.ok)
+                console.log("Hiba lépett fel az adatbázis kapcsolat létrehozása során");
+            else
+                return res.json();
+    
+        })
+        .then((res)=>{
+            res.forEach(element =>{
+                adatok.push(element)
+            });
+            AdatokBetolteseTablaba(adatok);
+    
+        });
+    };
+
+    AdatokLekereseAdatbazisbol();
+}
