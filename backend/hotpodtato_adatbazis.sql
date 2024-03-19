@@ -93,3 +93,16 @@ INSERT INTO players(leaguetype,playername,team,position,exp,status,injtype,recov
 ("Dynasty","Brandon Aubrey","DAL","TE","R","H","None","0 week",15,0,0,0,0,0,0,0,0,0,0,0,0,10.47,157),
 ("Redraft","Ja'Marr Chase","CIN","WR","2","H","None","0 week",14,-7,0,0,-6,0,93,1156,7,0,0,0,0,10.34,156.72);
 
+CREATE TABLE news(
+    id INT NOT NULL,
+    content Longtext,
+    author VARCHAR(100),
+    dates date
+);
+
+CREATE TABLE blog(
+    id INT NOT NULL,
+    content Longtext,
+    author VARCHAR(100),
+    dates date
+);
