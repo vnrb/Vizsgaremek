@@ -2,7 +2,9 @@ const fs = require('fs');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
+app.use(cors());
 
 // ADATBÁZIS LEKÉRDEZÉS 
 
@@ -324,20 +326,25 @@ app.get('/login', (req, res) => {
 
 
 
-app.post('/login', (req, res) => {
-    const { usermail, password } = req.body;
-    connection.query(`SELECT * FROM users WHERE usermail = '${usermail}' AND passw = '${password}'`, (error, results) => {
+app.post('/login',bodyParser.json(), (req, res) => {
+    const connection = kapcsolat();
+    const adat = req.body;
+    console.log(adat);
+    //console.log(`SELECT count(*) as db FROM users WHERE usermail = '${adat.usermail}' AND passw = '${adat.passw}'`);
+    connection.query(`SELECT count(*) as db FROM users WHERE usermail = '${adat.usermail}' and passw ='${adat.passw}'`, (error, result,fields) => {
         if (error) {
-            res.status(500).json({ message: 'Hiba történt az adatbáziskapcsolat során.' });
+            res.status(500).json({ message: 'Hiba történt a lekérdezés során.' });
             return;
         }
 
-        if (results.length > 0) {
+        console.log(result);
+        if (result[0].db == 1) {
             res.status(200).json({ message: 'Sikeres bejelentkezés.' });
         } else {
             res.status(401).json({ message: 'Érvénytelen felhasználónév vagy jelszó.' });
         }
     });
+    connection.end();
 });
 
 

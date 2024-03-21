@@ -12,7 +12,7 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
-  
+
 
 
 </head>
@@ -57,37 +57,37 @@
 </body>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-      const loginForm = document.getElementById('loginForm');
-  
-      loginForm.addEventListener('submit', async function (event) {
-          event.preventDefault();
-  
-          const usermail = document.getElementById('username').value;
-          const password = document.getElementById('password').value;
-  
-          try {
-              const response = await fetch('/login', {
-                  method: 'POST',
-                  headers: {
-                      'Content-Type': 'application/json'
-                  },
-                  body: JSON.stringify({ usermail, password })
-              });
-  
-              const responseData = await response.json();
-  
-              if (response.ok) {
-                  alert(responseData.message);
-                  window.location.href = '../index.html';
-              } else {
-                  alert(responseData.message);
-              }
-          } catch (error) {
-              console.error('Hálózati hiba:', error);
-              alert('Hálózati hiba történt.');
-          }
-      });
+    const loginForm = document.getElementById('loginForm');
+
+    loginForm.addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      const usermail = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      try {
+        const response = await fetch('http://localhost:3000/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ usermail:usermail, passw:password })
+        });
+
+        const responseData = await response.json();
+
+        if (response.ok) {
+          alert(responseData.message);
+          window.location.href = '../index.html';
+        } else {
+          alert(responseData.message);
+        }
+      } catch (error) {
+        console.error('Hálózati hiba:', error);
+        alert('Hálózati hiba történt.');
+      }
+    });
   });
-  </script>
-  
+</script>
+
 </html>
