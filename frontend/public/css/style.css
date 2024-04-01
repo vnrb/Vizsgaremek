@@ -285,3 +285,11 @@ td, th{
 #fejlec{
     font-weight: bold;
 }
+
+#masterDiv{
+    padding: 10px;
+}
+
+#leaguenameDiv{
+    background-color: aqua;
+}

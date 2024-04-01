@@ -285,6 +285,61 @@ app.get('/inj', (req, res) => {
     connection.end();
 });
 
+app.get('/league1', (req, res) => {
+    const connection = kapcsolat();
+    connection.query("SELECT * FROM `leagues` WHERE `leaguename` LIKE 'Superstars'", (error, result, fields) => {
+        if (error)
+            res.send({ "error": "Hiba lépett fel a lekérés során." })
+        else
+            res.setHeader('Access-Control-Allow-Origin', '*');
+        res.send(result);
+        console.log(result);
+    })
+
+    connection.end();
+});
+
+app.get('/league2', (req, res) => {
+    const connection = kapcsolat();
+    connection.query("SELECT * FROM `leagues` WHERE `leaguename` LIKE 'Tojáslabda'", (error, result, fields) => {
+        if (error)
+            res.send({ "error": "Hiba lépett fel a lekérés során." })
+        else
+            res.setHeader('Access-Control-Allow-Origin', '*');
+        res.send(result);
+        console.log(result);
+    })
+
+    connection.end();
+});
+
+app.get('/league3', (req, res) => {
+    const connection = kapcsolat();
+    connection.query("SELECT * FROM `leagues` WHERE `leaguename` LIKE 'GOATs'", (error, result, fields) => {
+        if (error)
+            res.send({ "error": "Hiba lépett fel a lekérés során." })
+        else
+            res.setHeader('Access-Control-Allow-Origin', '*');
+        res.send(result);
+        console.log(result);
+    })
+
+    connection.end();
+});
+
+app.get('/league4', (req, res) => {
+    const connection = kapcsolat();
+    connection.query("SELECT * FROM `leagues` WHERE `leaguename` LIKE 'SBKings'", (error, result, fields) => {
+        if (error)
+            res.send({ "error": "Hiba lépett fel a lekérés során." })
+        else
+            res.setHeader('Access-Control-Allow-Origin', '*');
+        res.send(result);
+        console.log(result);
+    })
+
+    connection.end();
+});
 
 // Autentikáció
 
