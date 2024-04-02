@@ -304,26 +304,6 @@ app.get('/login', (req, res) => {
 
 
 
-/* app.post('/login', (req, res) => {
-    const { username, password } = req.body;
-    const connection = kapcsolat();
-    connection.connect();
-    connection.query('SELECT * FROM users WHERE username = ? AND passw = ?', [username, password], (error, results) => {
-        connection.end(); // Kapcsolat lezárása itt, a callbackben
-
-        if (error) {
-            res.status(500).json({ message: 'Hiba történt az adatbáziskapcsolat során.' });
-            return;
-        }
-        if (results.length > 0) {
-            res.status(200).json({ message: 'Sikeres bejelentkezés.' });
-        } else {
-            res.status(401).json({ message: 'Érvénytelen felhasználónév vagy jelszó.' });
-        }
-    });
-}); */
-
-
 
 
 app.post('/login',bodyParser.json(), (req, res) => {
@@ -347,7 +327,22 @@ app.post('/login',bodyParser.json(), (req, res) => {
     connection.end();
 });
 
+// Hírek
 
+app.get('/news/:id', (req,res)=>{
+    const connection = kapcsolat();
+    connection.connect();
+    connection.query('SELECT * FROM news WHERE id=' + req.params.id, (error, result, field) =>{
+        if(error){
+            res.send({error: "Hiba lépett fel a lekérés során."});
+        }
+        else{
+            res.setHeader('Access-Control-Allow-Origin','*');
+            res.send(result);
+        }
+    });    
+    connection.end();
+})
 
 
 
