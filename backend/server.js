@@ -383,6 +383,25 @@ app.post('/login',bodyParser.json(), (req, res) => {
 });
 
 // Hírek
+app.get('/news/', (req,res)=>{
+    const newNews = {
+        content : req.body.content,
+        author : req.body.author,
+        date : req.body.dates
+    }
+    const connection = kapcsolat();
+    connection.connect();
+    connection.query('SELECT * FROM news', (error, result, field) =>{
+        if(error){
+            res.send({error: "Hiba lépett fel a lekérés során."});
+        }
+        else{
+            res.setHeader('Access-Control-Allow-Origin','*');
+            res.send(result);
+        }
+    });    
+    connection.end();
+})
 
 app.get('/news/:id', (req,res)=>{
     const connection = kapcsolat();
@@ -398,6 +417,8 @@ app.get('/news/:id', (req,res)=>{
     });    
     connection.end();
 })
+
+
 
 
 
