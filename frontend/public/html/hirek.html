@@ -61,29 +61,8 @@
   <div class="blog-page">
     <div class="container">
       <div class="row">
-        <div class="blog-post col-lg-4 col-md-4 col-sm-4">
+        <div class="blog-post col-lg-4 col-md-4 col-sm-4"  id="blog-post">
           <h1>Lorem #1</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus possimus ut, error mollitia
-            similique officia consectetur cupiditate doloremque, facere, perspiciatis harum consequatur
-            omnis qui nisi. Eligendi iusto unde minima quam!</p>
-          <p>Szerző: </p>
-          <p>Dátum:</p>
-        </div>
-        <div class="blog-post col-lg-4 col-md-4 col-sm-4">
-          <h1>Lorem #2</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus possimus ut, error mollitia
-            similique officia consectetur cupiditate doloremque, facere, perspiciatis harum consequatur
-            omnis qui nisi. Eligendi iusto unde minima quam!</p>
-          <p>Szerző: </p>
-          <p>Dátum:</p>
-        </div>
-        <div class="blog-post col-lg-4 col-md-4 col-sm-4">
-          <h1>Lorem #3</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus possimus ut, error mollitia
-            similique officia consectetur cupiditate doloremque, facere, perspiciatis harum consequatur
-            omnis qui nisi. Eligendi iusto unde minima quam!</p>
-          <p>Szerző: </p>
-          <p>Dátum:</p>
         </div>
       </div>
     </div>
@@ -99,7 +78,7 @@
         const data = await response.json();
         return data;
       } catch (error) {
-        console.error('Hiba történt az adatok lekérdezése során:', error);
+        console.log('Hiba történt az adatok lekérdezése során:', error);
       }
     }
 
@@ -112,12 +91,12 @@
         blogPosts.forEach(post => {
           const postElement = document.createElement('div');
           postElement.innerHTML = `
-          <p>${req.content}</p>
-          <p>Szerző: ${req.author}</p>
-          <p>Dátum: ${req.dates}</p>
-            `;
+            <p>${post.content}</p>
+            <p>Szerző: ${post.author}</p>
+            <p>Dátum: ${post.dates}</p>
+          `;
           console.log(postElement);
-
+          document.body.appendChild(postElement);
           blogPostsContainer.appendChild(postElement);
         });
       } else {

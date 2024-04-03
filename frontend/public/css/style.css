@@ -304,4 +304,6 @@ td, th{
     min-height: auto;
     margin: 20px auto;
     padding: 15px;
+    display: inline-block;
+
 }

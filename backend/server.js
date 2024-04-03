@@ -384,11 +384,7 @@ app.post('/login',bodyParser.json(), (req, res) => {
 
 // Hírek
 app.get('/news/', (req,res)=>{
-    const newNews = {
-        content : req.body.content,
-        author : req.body.author,
-        date : req.body.dates
-    }
+    const newNews = req.body;
     const connection = kapcsolat();
     connection.connect();
     connection.query('SELECT * FROM news', (error, result, field) =>{
