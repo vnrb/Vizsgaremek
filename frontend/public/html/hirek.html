@@ -60,10 +60,7 @@
 
   <div class="blog-page">
     <div class="container">
-      <div class="row">
-        <div class="blog-post col-lg-4 col-md-4 col-sm-4"  id="blog-post">
-          <h1>Lorem #1</h1>
-        </div>
+      <div class="row" id="blog-post-row">
       </div>
     </div>
   </div>
@@ -84,19 +81,21 @@
 
     // Függvény a bejegyzések megjelenítéséhez az oldalon
     async function displayBlogPosts() {
-      const blogPostsContainer = document.getElementById('blog-post');
+      const blogPostsContainer = document.getElementById('blog-post-row');
       const blogPosts = await fetchBlogPosts();
 
       if (blogPosts && blogPosts.length > 0) {
         blogPosts.forEach(post => {
           const postElement = document.createElement('div');
+          postElement.setAttribute("class","blog-post col-lg-4 col-md-4 col-sm-4");
           postElement.innerHTML = `
+            <h1>Lorem IPsum 1</h1>
             <p>${post.content}</p>
             <p>Szerző: ${post.author}</p>
             <p>Dátum: ${post.dates}</p>
           `;
           console.log(postElement);
-          document.body.appendChild(postElement);
+          //document.body.appendChild(postElement);
           blogPostsContainer.appendChild(postElement);
         });
       } else {
