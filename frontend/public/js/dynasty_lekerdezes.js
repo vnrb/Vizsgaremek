@@ -232,3 +232,4 @@ function positionTe(){
 
     AdatokLekereseAdatbazisbol();
 }
+

@@ -127,11 +127,11 @@ INSERT INTO leagues(leaguename,leaguetype,numberofplayers,members,gamesplayed,ba
 ("GOATs","Dynasty",8,"FumbleGuy",11,"3-7","311-712"),
 ("GOATs","Dynasty",8,"Joe Montana",11,"1-9","254-997"),
 ("SBKings","Redraft",6,"Szikla",10,"8-2","901-513"),
-("SBKings","Redraft",6,"BigHit",12,"8-2","875-504"),
-("SBKings","Redraft",6,"Speedy",12,"7-3","801-494"),
-("SBKings","Redraft",6,"Baller",12,"5-5","711-703"),
-("SBKings","Redraft",6,"Alfa",12,"4-6","455-712"),
-("SBKings","Redraft",6,"LastDance",12,"2-8","334-808");
+("SBKings","Redraft",6,"BigHit",10,"8-2","875-504"),
+("SBKings","Redraft",6,"Speedy",10,"7-3","801-494"),
+("SBKings","Redraft",6,"Baller",10,"5-5","711-703"),
+("SBKings","Redraft",6,"Alfa",10,"4-6","455-712"),
+("SBKings","Redraft",6,"LastDance",10,"2-8","334-808");
 
 CREATE TABLE news(
     id INT NOT NULL,

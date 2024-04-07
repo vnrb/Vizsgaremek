@@ -25,66 +25,80 @@
 
 <body>
   <header>
-             <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-blue">
-              <img src="../pics/logo.png" id="balazsmate" alt="PhotoLogo">
-              <a href="index.html" class="navbar-brand">HOT PODTATO FANTASY</a>
-              <button class="navbar-toggler" type="button" aria-controls="navLinks" aria-label="toggle navigation" data-toggle="collapse" data-target="#navLinks">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div id="navLinks" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
+    <div>
+      <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-blue">
+        <img src="../pics/logo.png" id="balazsmate" alt="PhotoLogo">
+          <a href="index.html" class="navbar-brand">HOT PODTATO FANTASY</a>
+        <button class="navbar-toggler" type="button" aria-controls="navLinks" aria-label="toggle navigation" data-toggle="collapse" data-target="#navLinks">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navLinks" class="collapse navbar-collapse justify-content-center">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">FŐOLDAL</a>
+            </li>
+            <li class="nav-item">
+              <a href="fantasyligak.html" class="nav-link">FANTASY LIGÁK</a>
+            </li>
+            <li class="nav-item">
+              <a href="hirek.html" class="nav-link">HÍREK</a>
+            </li>
               <li class="nav-item">
-                <a href="index.html" class="nav-link">FŐOLDAL</a>
+                <a href="blog.html" class="nav-link">BLOG</a>
               </li>
-                <li class="nav-item">
-                    <a href="fantasyligak.html" class="nav-link">FANATASY LIGÁK</a>
-                </li>
-                <li class="nav-item">
-                    <a href="hirek.html" class="nav-link">HÍREK</a>
-                </li>
-                <li class="nav-item">
-                    <a href="blog.html" class="nav-link">BLOG</a>
-                </li>
-            <ul id="socialLinks" class="navbar-nav ml-auto">
-            <li><a href="mailto:mate@bmatephoto.hu" target="_blank"><i class="far fa-envelope"></i></a></li>
-            <li><a href="https://www.facebook.com/hodpotatofantasy/"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://www.instagram.com/hotpodtatofantasy/"><i class="fab fa-instagram"></i></a></li>
-             </ul>
+          </ul>
+        </div>
+        <div id="socialLinks" class="navbar-nav">
+          <ul class="navbar-nav ml-auto">
+            <li>
+              <a href="mailto:mate@bmatephoto.hu" target="_blank"><i class="far fa-envelope"></i></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/hodpotatofantasy/"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li style="margin-right: 2cm;">
+              <a href="https://www.instagram.com/hotpodtatofantasy/"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
         </div>
       </nav>
+    </div>
   </header>
 
-<body>
+  <div id="masterDiv">
+    <h1 id="felirat">NFL Player Rankings</h1>
+    <div>
+      <div class="position-choice">
+        <input type="radio" id="all" name="position" value="all" onclick="positionAll()" checked>
+        <label for="all">All</label>
+      </div>
+      <div class="position-choice">
+        <input type="radio" id="qb" name="position" value="qb" onclick="positionQb()">
+        <label for="qb">Quarterback</label>
+      </div>
+      <div class="position-choice">
+        <input type="radio" id="rb" name="position" value="rb" onclick="positionRb()">
+        <label for="rb">Running Back</label>
+      </div>
+      <div class="position-choice">
+        <input type="radio" id="wr" name="position" value="wr" onclick="positionWr()">
+        <label for="wr">Wide Receiver</label>
+      </div>
+      <div class="position-choice">
+        <input type="radio" id="te" name="position" value="te" onclick="positionTe()">
+        <label for="te">Tight End</label>
+      </div>
+    </div>
 
-  <h1>NFL Player Rankings</h1>
-  <div>
-    <div class="position-choice">
-      <input type="radio" id="all" name="position" value="all" onclick="positionAll()" checked>
-      <label for="all">All</label>
-    </div>
-    <div class="position-choice">
-      <input type="radio" id="qb" name="position" value="qb" onclick="positionQb()">
-      <label for="qb">Quarterback</label>
-    </div>
-    <div class="position-choice">
-      <input type="radio" id="rb" name="position" value="rb" onclick="positionRb()">
-      <label for="rb">Running Back</label>
-    </div>
-    <div class="position-choice">
-      <input type="radio" id="wr" name="position" value="wr" onclick="positionWr()">
-      <label for="wr">Wide Receiver</label>
-    </div>
-    <div class="position-choice">
-      <input type="radio" id="te" name="position" value="te" onclick="positionTe()">
-      <label for="te">Tight End</label>
-    </div>
-  </div>
-
-
-  <div id="tablaDiv">
+    <br>
     
+    <div id="tablaDiv">
+      
+    </div>
   </div>
 
+  <br>
+ 
 </body>
 
 

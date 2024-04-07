@@ -10,9 +10,9 @@ AdatokBetolteseTablaba =(adatok)=>{
         CellatASorba(row,adatok[i].playername);
         CellatASorba(row,adatok[i].team);
         CellatASorba(row,adatok[i].position);
-        CellatASorba(row,adatok[i].exp);
         CellatASorba(row,adatok[i].status);
-        CellatASorba(row,adatok[i].injtype);;
+        CellatASorba(row,adatok[i].recoverytime);
+        CellatASorba(row,adatok[i].injtype);
 
         table.appendChild(row);
     } 
@@ -32,9 +32,9 @@ const FejlecKeszites = (table)=>{
     CellatASorba(row,"Player Name");
     CellatASorba(row,"Team");
     CellatASorba(row,"Position");
-    CellatASorba(row,"Exp");
     CellatASorba(row,"Status");
-    CellatASorba(row,"INJ Type")
+    CellatASorba(row,"Recovery time");
+    CellatASorba(row,"Injury type");
     table.appendChild(row);
 };
 

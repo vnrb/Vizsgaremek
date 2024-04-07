@@ -33,6 +33,7 @@ header .navbar-brand {
 }
 
 #navLinks {
+    margin: auto;
     font-family: 'Bebas Neue', sans-serif;
     font-style: normal;
     text-transform: lowercase;
@@ -47,6 +48,12 @@ header .navbar-brand {
 #navLinks #currentItem a{
     text-decoration: underline;
     color: black;
+}
+
+#navUl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-item {
@@ -73,6 +80,7 @@ header .navbar-brand {
 
 #socialLinks a{
     color:rgb(138, 134, 129);
+    font-size: 1.5em;
 }
 
 #socialLinks a:hover{
@@ -252,13 +260,19 @@ table {
     opacity: 1;
     transition: 0.25s;
     overflow: hidden;
-   
 
 }
 
 #behuzas{
     text-align: center;
     border: 2px solid rgb(254, 234, 215);
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#keret{
+    text-align: center;
     margin-top: 50px;
     margin-left: 100px;
     margin-right: 100px;
@@ -274,8 +288,16 @@ table {
     
 }
 
+table{
+    overflow-x: auto;
+    width: 100%;
+}
+
+
 td, th{
+    padding: 8px;
     text-align: center;
+    width: auto;
 }
 
 #thname{
@@ -284,14 +306,63 @@ td, th{
 
 #fejlec{
     font-weight: bold;
+    background-color: antiquewhite;
+    color: rgb(138, 134, 129);
+    border-bottom: 2px solid rgb(138, 134, 129);
+    border-bottom-left-radius: 10px;
+
 }
 
 #masterDiv{
-    padding: 10px;
+    table-layout: auto;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-#leaguenameDiv{
-    background-color: aqua;
+#tablaDiv{
+    border: 2px solid rgb(138, 134, 129);
+    border-radius: 10px;
+
+}
+
+#leaguefl{
+    font-weight: bolder;
+    font-size: large;
+    text-decoration: underline;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: rgb(138, 134, 129);
+    color: antiquewhite;
+}
+
+#leaguefl2{
+    font-weight: bolder;
+    text-align: center;
+    background-color: antiquewhite;
+    color: rgb(138, 134, 129);
+    border-bottom: 2px solid rgb(138, 134, 129);
+}
+
+#flLigaTabla, #ligaTabla{
+    table-layout: fixed
+}
+
+#leagueDiv{
+    width: 49%;
+    border: 2px solid rgb(138, 134, 129);
+    border-radius: 10px;
+
+}
+
+#ligaDiv, #ligaDiv2{
+    display: flex;
+    justify-content: space-between;
+}
+
+#ligaTabla{
+    flex: 40%;
 }
 
 .blog-page {
@@ -305,5 +376,18 @@ td, th{
     margin: 20px auto;
     padding: 15px;
     display: inline-block;
-
 }
+
+#felirat{
+    color: rgb(138, 134, 129);
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+#ligafelirat{
+    color: rgb(138, 134, 129);
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
