@@ -171,3 +171,9 @@ WHERE id = 3;
 UPDATE news
 SET title = '35 éves korában holtan találtak a nagymamája házában Vontae Davist.'
 WHERE id = 4;
+
+ALTER TABLE blog
+ADD COLUMN title VARCHAR(255);
+
+INSERT INTO blog(id,content,author,dates,title) VALUES
+(1,"Üdv mindenkinek a Fantasy Amerikaifoci Blogon, ahol a sport és a fantázia összeolvad, hogy létrehozza az ultimate játékélményt! Mostantól ez a weboldal a te virtuális otthonod lesz minden olyan izgalmas információhoz és tippekhez, amelyekre szükséged van az amerikaifoci fantasztikus világában való navigáláshoz. Ha eddig nem vagy jártas a fantasy amerikaifoci világában, ne aggódj! Itt mindenki számára van valami: a kezdőktől a veterán játékosokig, mindenkinek tartogatunk érdekes tartalmakat és tippeket. Készülj fel arra, hogy szárnyalj a hét minden egyes napján, mivel friss hírekkel, elemzésekkel és stratégiákkal fogunk ellátni téged, hogy te légy az első, aki mindig az aktuális helyzetről és a legfrissebb fejleményekről értesült. Számíthatsz ránk az aktuális sérülésekről, a meccs előzeteseiről, a játékosok teljesítményének elemzéséről és még sok másról. De ez nem csak rólunk szól! A közösségünk kiemelkedően fontos számunkra. Itt lehetőséged lesz megosztani a saját gondolataidat, véleményeidet és tippeidet más rajongókkal. A viták, a tanácsok és a barátságok minden bizonnyal itt fognak kialakulni. Szóval, ha te is az amerikaifoci szerelmese vagy, és szívesen belevetnéd magad a fantasy játék izgalmas világába, akkor ne habozz tovább! Lépj be hozzánk, és csatlakozz a Fantasy Amerikaifoci Blog közösségéhez. A játék most kezdődik!","Hotpodtato","2024-04-07","Megnyitottuk kapuinkat!");
