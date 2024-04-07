@@ -415,6 +415,37 @@ app.get('/news/:id', (req,res)=>{
 })
 
 
+// 
+app.get('/blog/', (req,res)=>{
+    const newBlog = req.body;
+    const connection = kapcsolat();
+    connection.connect();
+    connection.query('SELECT * FROM blog', (error, result, field) =>{
+        if(error){
+            res.send({error: "Hiba lépett fel a lekérés során."});
+        }
+        else{
+            res.setHeader('Access-Control-Allow-Origin','*');
+            res.send(result);
+        }
+    });    
+    connection.end();
+})
+
+app.get('/blog/:id', (req,res)=>{
+    const connection = kapcsolat();
+    connection.connect();
+    connection.query('SELECT * FROM blog WHERE id=' + req.params.id, (error, result, field) =>{
+        if(error){
+            res.send({error: "Hiba lépett fel a lekérés során."});
+        }
+        else{
+            res.setHeader('Access-Control-Allow-Origin','*');
+            res.send(result);
+        }
+    });    
+    connection.end();
+})
 
 
 

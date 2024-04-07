@@ -152,3 +152,28 @@ INSERT INTO news(id,content,author,dates) VALUES
 (2,"Megvan Patrick Mahomes idei csereirányítója, aki nem más mint Carson Wentz – számolt be Jordan Schultz. A 31 éves, korábbi 1/2-es QB egy évre írt alá a Chiefshez, a pénzügyekről egyelőre nincs pontos információ. Kansas Cityben Ian Book és Chris Oladokun volt eddig rosteren Mahomes mögött, így várható volt, hogy hoznak valami életképesebb cserét a többszörös MVP mögé. Wentz tavaly a Ramsben játszott és egyszer kezdőként is pályára lépett. Az utóbbi öt évben a Chiefs lesz az ötödik csapata, hiszen az Eagles, a Colts, a Commanders és a Rams színeiben is irányított az elmúlt szezonokban. A Chiefs szurkolóknak eddig szerencsére nem nagyon kellett azzal foglalkozniuk, hogy ki a csereirányító, ugyanis Mahomes mindössze négy meccset hagyott ki karrierje során.", "Fűzővel Kifele","2024-04-02"),
 (3,"Nem csak a szupersztárokból áll az NFL és ezt a liga illetékesei is tudják. Ezért indult el anno egy teljesítményalapú bónusz program, amelynek a célja az, hogy a keveset kereső, de sokat játszó játékosok kompenzációt kapjanak. Ennek köszönhetően idén négy játékos is 900+ ezer dollárral lett gazdagabb, összesen pedig $393,8 milliót osztott szét a liga. A legjobban a guard John Simpson járt, akit egy 974 613 dolláros bónusszal lepte meg az NFL. A támadó tavaly 1242 snapen játszott a Ravensben, tette mindezt 1,01 millió dollárért, így effektíve megduplázta a bérét (mindezt úgy, hogy a piacon évi 6 millió dollárért igazolta le a Jets). Rajta kívül még 900 ezer dollár fölötti bónuszt kapott az Eagles safety Reed Blankenship ($923,059), a Bills tackle Spencer Brown ($912,723) és a Bengals guard Cordell Volson ($905,972). Illetve a lista ötödik helyét a Dolphins cornerback Kader Kohou ($878,167) szerezte meg.", "Fűzővel Kifele", "2024-04-02"),
 (4,"35 éves korában holtan találtak a nagymamája házában Vontae Davist. A fénykorában posztja krémjéhez tartozó cornerback mindössze 35 éves volt, de a rendőrség feltételezése szerint nem történt idegenkezűség. Davis 2009-ben került a ligába, az 1/25-ös cetlivel választotta ki a Dolphins. Miamiban mindössze három évet töltött, majd a Coltshoz cserélték, ahol egészen a 2017-es idény végéig játszott, míg a sérülései miatt menesztették. Ezt követően igazolta le a Bills, de miután a második fordulóban csúnyán megégette az elkapó Mike Williams egyszerűen fogta magát és lement a pályáról, majd a meccs után bejelentette a visszavonulását. Pályafutása alatt 121 meccsen lépett pályára, kétszer választották Pro Bowlernek, valamint volt 98 leütött passza, 22 INT-je és egy pick-sixe. Nyugodjon békében!","Fűzővel Kifele","2024-04-02");
+
+ALTER TABLE news
+ADD COLUMN title VARCHAR(255);
+
+UPDATE news
+SET title = 'Az Eagles hosszabbított a safety Reed Blankenshippel...'
+WHERE id = 1;
+
+UPDATE news
+SET title = 'Megvan Patrick Mahomes idei csereirányítója...'
+WHERE id = 2;
+
+UPDATE news
+SET title = 'Nem csak a szupersztárokból áll az NFL és ezt a liga illetékesei is tudják.'
+WHERE id = 3;
+
+UPDATE news
+SET title = '35 éves korában holtan találtak a nagymamája házában Vontae Davist.'
+WHERE id = 4;
+
+ALTER TABLE blog
+ADD COLUMN title VARCHAR(255);
+
+INSERT INTO blog(id,content,author,dates,title) VALUES
+(1,"Üdv mindenkinek a Fantasy Amerikaifoci Blogon, ahol a sport és a fantázia összeolvad, hogy létrehozza az ultimate játékélményt! Mostantól ez a weboldal a te virtuális otthonod lesz minden olyan izgalmas információhoz és tippekhez, amelyekre szükséged van az amerikaifoci fantasztikus világában való navigáláshoz. Ha eddig nem vagy jártas a fantasy amerikaifoci világában, ne aggódj! Itt mindenki számára van valami: a kezdőktől a veterán játékosokig, mindenkinek tartogatunk érdekes tartalmakat és tippeket. Készülj fel arra, hogy szárnyalj a hét minden egyes napján, mivel friss hírekkel, elemzésekkel és stratégiákkal fogunk ellátni téged, hogy te légy az első, aki mindig az aktuális helyzetről és a legfrissebb fejleményekről értesült. Számíthatsz ránk az aktuális sérülésekről, a meccs előzeteseiről, a játékosok teljesítményének elemzéséről és még sok másról. De ez nem csak rólunk szól! A közösségünk kiemelkedően fontos számunkra. Itt lehetőséged lesz megosztani a saját gondolataidat, véleményeidet és tippeidet más rajongókkal. A viták, a tanácsok és a barátságok minden bizonnyal itt fognak kialakulni. Szóval, ha te is az amerikaifoci szerelmese vagy, és szívesen belevetnéd magad a fantasy játék izgalmas világába, akkor ne habozz tovább! Lépj be hozzánk, és csatlakozz a Fantasy Amerikaifoci Blog közösségéhez. A játék most kezdődik!","Hotpodtato","2024-04-07","Megnyitottuk kapuinkat!");
