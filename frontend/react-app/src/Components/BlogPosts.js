@@ -1,31 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function BlogPosts() {
+const BlogPosts = () => {
   const [data, setData] = useState([]);
-
   useEffect(() => {
-    fetchData();
+    fetch('http://localhost:8080/blog/')
+      .then(response => response.json())
+      .then(result => {
+        setData(result);
+      })
+      .catch(error => {
+        console.log('Hiba történt az adatok lekérdezése közben:', error);
+      });
   }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await axios.get('http://localhost:3000/blog/:id');
-      setData(response.data);
-    } catch (error) {
-      console.error('Error: ' + error);
-    }
-  };
-
   return (
-    <div>
-      <ul>
-        {data.map(item => (
-          <li key={item.id}>{item.content}</li>
-        ))}
-      </ul>
+    <div className='blog-page'>
+      <div className='container'>
+        <div className='row'>
+          {data.map(item => (
+            <div className='blog-post col-lg-4 col-md-4 col-sm-4' key={item.id}>
+              <h1>{item.title}</h1>
+              <p>{item.content}</p>
+              <p>Szerző: {item.author}</p>
+              <p>Dátum: {item.dates}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
 export default BlogPosts;

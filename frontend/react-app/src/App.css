@@ -37,3 +37,96 @@
   }
 }
 
+
+header .navbar-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 200;
+  color: black;
+  height: 100%;
+  text-transform: uppercase;
+  vertical-align: middle;
+  position: relative;
+}
+
+#mainNavbar {
+  background-color: antiquewhite;
+}
+
+
+#navLinks {
+  margin: auto;
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  text-transform: lowercase;
+  font-size: 1.5em;
+  margin-right: 300px;
+  z-index: auto;
+}
+#navLinks a{
+  color: rgb(138, 134, 129);
+}
+
+#navLinks #currentItem a{
+  text-decoration: underline;
+  color: black;
+}
+
+#navUl{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  padding: 0 20px
+}
+
+#navLinks a:hover{
+  color: black;
+  transition: 0.5s;
+}
+#mainNavbar {
+
+  justify-content: flex-end;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+#socialLinks a{
+  color:rgb(138, 134, 129);
+  font-size: 1.5em;
+}
+
+#socialLinks a:hover{
+  color: black;
+  transition: 0.5s;
+}
+
+#socialLinks li{
+  margin: 0 5px;
+}
+
+
+
+.blog-page {
+  color: rgba(0, 0, 0);
+  padding: 30px;
+}
+
+.blog-post {
+  background-color: rgba(254, 234, 215, 1);
+  min-height: auto;
+  margin: 20px auto;
+  padding: 15px;
+  display: inline-block;
+}
