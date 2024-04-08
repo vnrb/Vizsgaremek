@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+
 
 const BlogPosts = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:8080/blog/')
+    fetch('http://localhost:3000/blog/')
       .then(response => response.json())
       .then(result => {
         setData(result);
