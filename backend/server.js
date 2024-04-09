@@ -447,6 +447,52 @@ app.get('/blog/:id', (req,res)=>{
     connection.end();
 })
 
+app.post('/blog-post',bodyParser.json(),(req, res)=>{
+    const newBlog = {
+        id : req.body.id,
+        content: req.body.content,
+        author: req.body.author,
+        dates: req.body.dates,
+        title: req.body.title
+    }
+    
+    const connection = kapcsolat();
+    connection.connect();
+    connection.query(`INSERT INTO blog(id,content,author,dates,title) VALUES (${newBlog.id},"${newBlog.content}", "${newBlog.author}","${newBlog.dates}","${newBlog.title}" );`, (error,result,field)=>{
+        if(error){
+            res.send({"error": "Hiba lépett fel a lekérés során.",
+            "error2":error.message});
+        }
+        else{
+            res.setHeader('Access-Control-Allow-Origin','*');
+            res.send(newBlog);
+        }
+    });
+    connection.end();
+})
 
+app.post('/news-post',bodyParser.json(),(req, res)=>{
+    const newNew = {
+        id : req.body.id,
+        content: req.body.content,
+        author: req.body.author,
+        dates: req.body.dates,
+        title: req.body.title
+    }
+    
+    const connection = kapcsolat();
+    connection.connect();
+    connection.query(`INSERT INTO news(id,content,author,dates,title) VALUES (${newNew.id},"${newNew.content}", "${newNew.author}","${newNew.dates}","${newNew.title}" );`, (error,result,field)=>{
+        if(error){
+            res.send({"error": "Hiba lépett fel a lekérés során.",
+            "error2":error.message});
+        }
+        else{
+            res.setHeader('Access-Control-Allow-Origin','*');
+            res.send(newNew);
+        }
+    });
+    connection.end();
+})
 
 app.listen(3000);
