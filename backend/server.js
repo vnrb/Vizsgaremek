@@ -449,7 +449,7 @@ app.get('/blog/:id', (req,res)=>{
 
 app.post('/blog-post',bodyParser.json(),(req, res)=>{
     const newBlog = {
-        id : req.body.id,
+        //id : req.body.id,
         content: req.body.content,
         author: req.body.author,
         dates: req.body.dates,
@@ -458,7 +458,7 @@ app.post('/blog-post',bodyParser.json(),(req, res)=>{
     
     const connection = kapcsolat();
     connection.connect();
-    connection.query(`INSERT INTO blog(id,content,author,dates,title) VALUES (${newBlog.id},"${newBlog.content}", "${newBlog.author}","${newBlog.dates}","${newBlog.title}" );`, (error,result,field)=>{
+    connection.query(`INSERT INTO blog(content,author,dates,title) VALUES ("${newBlog.content}", "${newBlog.author}","${newBlog.dates}","${newBlog.title}" );`, (error,result,field)=>{
         if(error){
             res.send({"error": "Hiba lépett fel a lekérés során.",
             "error2":error.message});
@@ -473,7 +473,6 @@ app.post('/blog-post',bodyParser.json(),(req, res)=>{
 
 app.post('/news-post',bodyParser.json(),(req, res)=>{
     const newNew = {
-        id : req.body.id,
         content: req.body.content,
         author: req.body.author,
         dates: req.body.dates,
@@ -482,7 +481,7 @@ app.post('/news-post',bodyParser.json(),(req, res)=>{
     
     const connection = kapcsolat();
     connection.connect();
-    connection.query(`INSERT INTO news(id,content,author,dates,title) VALUES (${newNew.id},"${newNew.content}", "${newNew.author}","${newNew.dates}","${newNew.title}" );`, (error,result,field)=>{
+    connection.query(`INSERT INTO news(id,content,author,dates,title) VALUES ("${newNew.content}", "${newNew.author}","${newNew.dates}","${newNew.title}" );`, (error,result,field)=>{
         if(error){
             res.send({"error": "Hiba lépett fel a lekérés során.",
             "error2":error.message});
