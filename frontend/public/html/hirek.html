@@ -96,7 +96,7 @@
       if (blogPosts && blogPosts.length > 0) {
         blogPosts.forEach(post => {
           const postElement = document.createElement('div');
-          postElement.setAttribute("class", "blog-post col-lg-4 col-md-4 col-sm-4");
+          postElement.setAttribute("class", "blog-post col-lg-4 col-md-6 col-sm-6");
           postElement.innerHTML = `
             <h1>${post.title}</h1>
             <p>${post.content}</p>
