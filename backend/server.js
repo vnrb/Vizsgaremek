@@ -359,14 +359,12 @@ app.get('/login', (req, res) => {
 
 
 
-
-
-app.post('/login',bodyParser.json(), (req, res) => {
+app.post('/login', bodyParser.json(), (req, res) => {
     const connection = kapcsolat();
     const adat = req.body;
     console.log(adat);
     //console.log(`SELECT count(*) as db FROM users WHERE usermail = '${adat.usermail}' AND passw = '${adat.passw}'`);
-    connection.query(`SELECT count(*) as db FROM users WHERE usermail = '${adat.usermail}' and passw ='${adat.passw}'`, (error, result,fields) => {
+    connection.query(`SELECT count(*) as db FROM users WHERE usermail = '${adat.usermail}' and passw ='${adat.passw}'`, (error, result, fields) => {
         if (error) {
             res.status(500).json({ message: 'Hiba történt a lekérdezés során.' });
             return;
@@ -374,7 +372,7 @@ app.post('/login',bodyParser.json(), (req, res) => {
 
         console.log(result);
         if (result[0].db == 1) {
-            res.status(200).json({ message: 'Sikeres bejelentkezés.' });
+            res.status(200).json({ message: 'Sikeres bejelentkezés.', redirectTo: req.baseUrl + '/frontend/public/html/admin-news.html' });
         } else {
             res.status(401).json({ message: 'Érvénytelen felhasználónév vagy jelszó.' });
         }
@@ -383,71 +381,71 @@ app.post('/login',bodyParser.json(), (req, res) => {
 });
 
 // Hírek
-app.get('/news/', (req,res)=>{
+app.get('/news/', (req, res) => {
     const newNews = req.body;
     const connection = kapcsolat();
     connection.connect();
-    connection.query('SELECT * FROM news', (error, result, field) =>{
-        if(error){
-            res.send({error: "Hiba lépett fel a lekérés során."});
+    connection.query('SELECT * FROM news', (error, result, field) => {
+        if (error) {
+            res.send({ error: "Hiba lépett fel a lekérés során." });
         }
-        else{
-            res.setHeader('Access-Control-Allow-Origin','*');
+        else {
+            res.setHeader('Access-Control-Allow-Origin', '*');
             res.send(result);
         }
-    });    
+    });
     connection.end();
 })
 
-app.get('/news/:id', (req,res)=>{
+app.get('/news/:id', (req, res) => {
     const connection = kapcsolat();
     connection.connect();
-    connection.query('SELECT * FROM news WHERE id=' + req.params.id, (error, result, field) =>{
-        if(error){
-            res.send({error: "Hiba lépett fel a lekérés során."});
+    connection.query('SELECT * FROM news WHERE id=' + req.params.id, (error, result, field) => {
+        if (error) {
+            res.send({ error: "Hiba lépett fel a lekérés során." });
         }
-        else{
-            res.setHeader('Access-Control-Allow-Origin','*');
+        else {
+            res.setHeader('Access-Control-Allow-Origin', '*');
             res.send(result);
         }
-    });    
+    });
     connection.end();
 })
 
 
 // 
-app.get('/blog/', (req,res)=>{
+app.get('/blog/', (req, res) => {
     const newBlog = req.body;
     const connection = kapcsolat();
     connection.connect();
-    connection.query('SELECT * FROM blog', (error, result, field) =>{
-        if(error){
-            res.send({error: "Hiba lépett fel a lekérés során."});
+    connection.query('SELECT * FROM blog', (error, result, field) => {
+        if (error) {
+            res.send({ error: "Hiba lépett fel a lekérés során." });
         }
-        else{
-            res.setHeader('Access-Control-Allow-Origin','*');
+        else {
+            res.setHeader('Access-Control-Allow-Origin', '*');
             res.send(result);
         }
-    });    
+    });
     connection.end();
 })
 
-app.get('/blog/:id', (req,res)=>{
+app.get('/blog/:id', (req, res) => {
     const connection = kapcsolat();
     connection.connect();
-    connection.query('SELECT * FROM blog WHERE id=' + req.params.id, (error, result, field) =>{
-        if(error){
-            res.send({error: "Hiba lépett fel a lekérés során."});
+    connection.query('SELECT * FROM blog WHERE id=' + req.params.id, (error, result, field) => {
+        if (error) {
+            res.send({ error: "Hiba lépett fel a lekérés során." });
         }
-        else{
-            res.setHeader('Access-Control-Allow-Origin','*');
+        else {
+            res.setHeader('Access-Control-Allow-Origin', '*');
             res.send(result);
         }
-    });    
+    });
     connection.end();
 })
 
-app.post('/blog-post',bodyParser.json(),(req, res)=>{
+app.post('/blog-post', bodyParser.json(), (req, res) => {
     const newBlog = {
         //id : req.body.id,
         content: req.body.content,
@@ -455,39 +453,43 @@ app.post('/blog-post',bodyParser.json(),(req, res)=>{
         dates: req.body.dates,
         title: req.body.title
     }
-    
+
     const connection = kapcsolat();
     connection.connect();
-    connection.query(`INSERT INTO blog(content,author,dates,title) VALUES ("${newBlog.content}", "${newBlog.author}","${newBlog.dates}","${newBlog.title}" );`, (error,result,field)=>{
-        if(error){
-            res.send({"error": "Hiba lépett fel a lekérés során.",
-            "error2":error.message});
+    connection.query(`INSERT INTO blog(content,author,dates,title) VALUES ("${newBlog.content}", "${newBlog.author}","${newBlog.dates}","${newBlog.title}" );`, (error, result, field) => {
+        if (error) {
+            res.send({
+                "error": "Hiba lépett fel a lekérés során.",
+                "error2": error.message
+            });
         }
-        else{
-            res.setHeader('Access-Control-Allow-Origin','*');
+        else {
+            res.setHeader('Access-Control-Allow-Origin', '*');
             res.send(newBlog);
         }
     });
     connection.end();
 })
 
-app.post('/news-post',bodyParser.json(),(req, res)=>{
+app.post('/news-post', bodyParser.json(), (req, res) => {
     const newNew = {
         content: req.body.content,
         author: req.body.author,
         dates: req.body.dates,
         title: req.body.title
     }
-    
+
     const connection = kapcsolat();
     connection.connect();
-    connection.query(`INSERT INTO news(id,content,author,dates,title) VALUES ("${newNew.content}", "${newNew.author}","${newNew.dates}","${newNew.title}" );`, (error,result,field)=>{
-        if(error){
-            res.send({"error": "Hiba lépett fel a lekérés során.",
-            "error2":error.message});
+    connection.query(`INSERT INTO news(id,content,author,dates,title) VALUES ("${newNew.content}", "${newNew.author}","${newNew.dates}","${newNew.title}" );`, (error, result, field) => {
+        if (error) {
+            res.send({
+                "error": "Hiba lépett fel a lekérés során.",
+                "error2": error.message
+            });
         }
-        else{
-            res.setHeader('Access-Control-Allow-Origin','*');
+        else {
+            res.setHeader('Access-Control-Allow-Origin', '*');
             res.send(newNew);
         }
     });

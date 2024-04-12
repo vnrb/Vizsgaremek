@@ -76,7 +76,7 @@
 
         if (response.ok) {
           alert(responseData.message);
-          window.location.href = '../admin-news.html';
+          window.location.href = responseData.redirectTo;
         } else {
           alert(responseData.message);
         }
