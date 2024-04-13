@@ -341,6 +341,7 @@ app.get('/league4', (req, res) => {
     connection.end();
 });
 
+
 // Autentikáció
 
 app.get('/login', (req, res) => {

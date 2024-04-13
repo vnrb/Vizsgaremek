@@ -26,26 +26,28 @@
 <body>
   <header>
     <div>
-      <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-blue">
-        <img src="../pics/logo.png" id="balazsmate" alt="PhotoLogo">
-          <a href="index.html" class="navbar-brand">HOT PODTATO FANTASY</a>
-        <button class="navbar-toggler" type="button" aria-controls="navLinks" aria-label="toggle navigation" data-toggle="collapse" data-target="#navLinks">
+      <nav id="mainNavbar" class="navbar navbar-expand-md navbar-light bg-blue">
+        <a href="index.html">
+          <img src="../pics/logo.png" id="logo" alt="PhotoLogo">
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navLinks" aria-label="toggle navigation"
+          data-toggle="collapse" data-target="#navLinks">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="navLinks" class="collapse navbar-collapse justify-content-center">
-          <ul class="navbar-nav mx-auto">
+        <div id="navLinks" class="collapse navbar-collapse">
+          <ul class="navbar-nav mx-auto"> <!-- Módosítottam ezt az osztályt -->
             <li class="nav-item">
-              <a href="index.html" class="nav-link">FŐOLDAL</a>
+              <a href="index.html" class="nav-link text-right">FŐOLDAL</a>
             </li>
             <li class="nav-item">
-              <a href="fantasyligak.html" class="nav-link">FANTASY LIGÁK</a>
+              <a href="fantasyligak.html" class="nav-link text-right">FANTASY LIGÁK</a>
             </li>
             <li class="nav-item">
-              <a href="hirek.html" class="nav-link">HÍREK</a>
+              <a href="hirek.html" class="nav-link text-right">HÍREK</a>
             </li>
-              <li class="nav-item">
-                <a href="build/index.html" class="nav-link">BLOG</a>
-              </li>
+            <li class="nav-item">
+              <a href="build/index.html" class="nav-link text-right">BLOG</a>
+            </li>
           </ul>
         </div>
         <div id="socialLinks" class="navbar-nav">
@@ -56,7 +58,7 @@
             <li>
               <a href="https://www.facebook.com/hodpotatofantasy/"><i class="fab fa-facebook"></i></a>
             </li>
-            <li style="margin-right: 2cm;">
+            <li>
               <a href="https://www.instagram.com/hotpodtatofantasy/"><i class="fab fa-instagram"></i></a>
             </li>
           </ul>
@@ -92,7 +94,7 @@
 
     <br>
     
-    <div id="tablaDiv">
+    <div class="table-responsive" id="tablaDiv">
       
     </div>
   </div>

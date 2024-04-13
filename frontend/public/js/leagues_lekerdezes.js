@@ -4,6 +4,7 @@ AdatokBetolteseTablaba =(adatok)=>{
     const div = document.getElementById("ligaDiv");
     const leaguediv =document.createElement("div");
     leaguediv.setAttribute("id", "leagueDiv")
+    leaguediv.setAttribute("class", "table-responsive")
     const leaguefl =document.createElement("div");
     leaguefl.setAttribute("id", "leaguefl")
     leaguediv.appendChild(leaguefl);
