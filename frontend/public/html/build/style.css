@@ -126,7 +126,6 @@ table {
     padding-left: 250px;
     padding-right: 250px;
 }
-
 .homepage {
     display:flex;
     grid-gap: 50px;
@@ -142,7 +141,6 @@ table {
     height: auto;
     aspect-ratio: 10 / 5;
 }
-
 .homepage .home1 a{
     font-size: 2rem;
     display:flex;
@@ -156,8 +154,7 @@ table {
     background-color: rgba(0,0,0, .4);
     opacity: 0;
     text-decoration: none;
-    overflow: hidden;
-  
+    overflow: hidden; 
 }
 .homepage .home1 a:hover{
     opacity: 1;
