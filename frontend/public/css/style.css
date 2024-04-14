@@ -40,7 +40,7 @@ header .navbar-brand {
     font-style: normal;
     text-transform: lowercase;
     font-size: 150%;
-
+    text-align: center;
     z-index: auto;
 }
 #navLinks a{
