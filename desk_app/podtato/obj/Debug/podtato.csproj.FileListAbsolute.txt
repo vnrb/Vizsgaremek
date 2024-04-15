@@ -11,3 +11,16 @@ C:\Users\nrb\Desktop\podtato\podtato\obj\Debug\podtato.pdb
 C:\Users\nrb\Desktop\Podtato\podtato\bin\Debug\MySql.Data.dll
 C:\Users\nrb\Desktop\Podtato\podtato\bin\Debug\MySql.Data.xml
 C:\Users\nrb\Desktop\Podtato\podtato\obj\Debug\podtato.csproj.CopyComplete
+C:\_DEV\SULI\Hot Podtato\desk_app\podtato\bin\Debug\podtato.exe.config
+C:\_DEV\SULI\Hot Podtato\desk_app\podtato\bin\Debug\podtato.exe
+C:\_DEV\SULI\Hot Podtato\desk_app\podtato\bin\Debug\podtato.pdb
+C:\_DEV\SULI\Hot Podtato\desk_app\podtato\bin\Debug\MySql.Data.dll
+C:\_DEV\SULI\Hot Podtato\desk_app\podtato\bin\Debug\MySql.Data.xml
+C:\_DEV\SULI\Hot Podtato\desk_app\podtato\obj\Debug\podtato.csproj.AssemblyReference.cache
+C:\_DEV\SULI\Hot Podtato\desk_app\podtato\obj\Debug\podtato.Form1.resources
+C:\_DEV\SULI\Hot Podtato\desk_app\podtato\obj\Debug\podtato.Properties.Resources.resources
+C:\_DEV\SULI\Hot Podtato\desk_app\podtato\obj\Debug\podtato.csproj.GenerateResource.cache
+C:\_DEV\SULI\Hot Podtato\desk_app\podtato\obj\Debug\podtato.csproj.CoreCompileInputs.cache
+C:\_DEV\SULI\Hot Podtato\desk_app\podtato\obj\Debug\podtato.csproj.CopyComplete
+C:\_DEV\SULI\Hot Podtato\desk_app\podtato\obj\Debug\podtato.exe
+C:\_DEV\SULI\Hot Podtato\desk_app\podtato\obj\Debug\podtato.pdb

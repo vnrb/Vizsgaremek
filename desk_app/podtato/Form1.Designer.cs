@@ -166,7 +166,7 @@ namespace podtato
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Hot Podtato";
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(235)))), ((int)(((byte)(215)))));
             this.Load += new System.EventHandler(this.Form1_Load);
